@@ -1,0 +1,12 @@
+# Citation Registry
+
+| Source ID | Title | Year | Source Tool | Source Type | URL | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| S1 | Recent advances and clinical applications of deep learning in medical image analysis. | 2022 | pubmed_search | biomedical_literature | https://pubmed.ncbi.nlm.nih.gov/35472844/ | Review paper summarizing recent advances in unsupervised and semi-supervised deep learning for medical image analysis. |
+| S2 | Evidence-based uncertainty-aware semi-supervised medical image segmentation. | 2024 | pubmed_search | biomedical_literature | https://pubmed.ncbi.nlm.nih.gov/38277924/ | Proposes EVIL method integrating Dempster-Shafer Theory for uncertainty-aware semi-supervised segmentation. |
+| S3 | Uncertainty-aware multi-view co-training for semi-supervised medical image segmentation and domain adaptation | 2020 | arxiv_search | preprint | https://arxiv.org/abs/2006.16806v1 | Introduces UMCT framework for semi-supervised segmentation and domain adaptation using uncertainty-aware multi-view co-training. |
+| S4 | Shifting to Machine Supervision: Annotation-Efficient Semi and Self-Supervised Learning for Automatic Medical Image Segmentation and Classification | 2023 | arxiv_search | preprint | https://arxiv.org/abs/2311.10319v6 | Presents S4MI pipeline leveraging self- and semi-supervised learning to reduce annotation requirements. |
+| S5 | Continual learning approach to domain shifts in medical imaging | 2021 | unknown | biomedical_literature | Not specified | Proposes continual learning method with dynamic memory to handle domain shifts and catastrophic forgetting. |
+| S6 | Boosting knowledge diversity, accuracy, and stability via tri-enhanced distillation for domain continual medical image segmentation. | 2024 | pubmed_search | biomedical_literature | Not specified | Introduces tri-enhanced distillation framework to improve continual learning for medical image segmentation. |
+| S7 | Incremental Learning Meets Transfer Learning: Application to Multi-site Prostate MRI Segmentation. | 2022 | pubmed_search | biomedical_literature | Not specified | Presents incremental-transfer learning framework to sequentially train on multi-site datasets and alleviate catastrophic forgetting. |
+| S8 | Segment Anything Model for Medical Image Analysis: an Experimental Study | 2023 | arxiv_search | preprint | https://arxiv.org/abs/2304.07839 | Evaluates SAM's zero-shot segmentation performance on 19 medical imaging datasets, highlighting variable performance. |

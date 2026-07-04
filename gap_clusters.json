@@ -1,0 +1,175 @@
+{
+  "limitations": [
+    {
+      "paper_id": "S1",
+      "paper_title": "Recent advances and clinical applications of deep learning in medical image analysis.",
+      "limitation_text": "Lack of large-sized and well-annotated datasets remains a major bottleneck for further improvement.",
+      "evidence_quote": "lack of large-sized and well-annotated datasets remains a major bottleneck",
+      "limitation_type_hint": "data availability",
+      "is_author_stated": true,
+      "confidence": "high"
+    },
+    {
+      "paper_id": "S8",
+      "paper_title": "Segment Anything Model for Medical Image Analysis: an Experimental Study",
+      "limitation_text": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks.",
+      "evidence_quote": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks.",
+      "limitation_type_hint": "variable model performance",
+      "is_author_stated": true,
+      "confidence": "high"
+    }
+  ],
+  "raw_clusters": [
+    {
+      "cluster_id": "C1",
+      "items": [
+        {
+          "paper_id": "S1",
+          "paper_title": "Recent advances and clinical applications of deep learning in medical image analysis.",
+          "limitation_text": "Lack of large-sized and well-annotated datasets remains a major bottleneck for further improvement.",
+          "evidence_quote": "lack of large-sized and well-annotated datasets remains a major bottleneck",
+          "limitation_type_hint": "data availability",
+          "is_author_stated": true,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "cluster_id": "C2",
+      "items": [
+        {
+          "paper_id": "S8",
+          "paper_title": "Segment Anything Model for Medical Image Analysis: an Experimental Study",
+          "limitation_text": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks.",
+          "evidence_quote": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks.",
+          "limitation_type_hint": "variable model performance",
+          "is_author_stated": true,
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "merged_clusters": [
+    {
+      "merged_cluster_id": "MC1",
+      "cluster_label": "Data availability constraints in medical image analysis",
+      "merged_from": [
+        "C1"
+      ],
+      "supporting_papers": [
+        "S1"
+      ],
+      "limitation_pattern": "Lack of large-sized and well-annotated datasets limits model improvement",
+      "merge_rationale": "Kept separate because this limitation specifically addresses dataset size and annotation quality as a bottleneck, which is distinct from performance variability issues.",
+      "items": [
+        {
+          "paper_id": "S1",
+          "paper_title": "Recent advances and clinical applications of deep learning in medical image analysis.",
+          "limitation_text": "Lack of large-sized and well-annotated datasets remains a major bottleneck for further improvement.",
+          "evidence_quote": "lack of large-sized and well-annotated datasets remains a major bottleneck"
+        }
+      ]
+    },
+    {
+      "merged_cluster_id": "MC2",
+      "cluster_label": "Variable model performance across datasets and tasks",
+      "merged_from": [
+        "C2"
+      ],
+      "supporting_papers": [
+        "S8"
+      ],
+      "limitation_pattern": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks",
+      "merge_rationale": "Kept separate because this limitation focuses on model performance variability and task complexity, which is conceptually distinct from data availability issues.",
+      "items": [
+        {
+          "paper_id": "S8",
+          "paper_title": "Segment Anything Model for Medical Image Analysis: an Experimental Study",
+          "limitation_text": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks.",
+          "evidence_quote": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks."
+        }
+      ]
+    }
+  ],
+  "tradeoff_graph": {
+    "tradeoffs": [
+      {
+        "tradeoff_id": "T1",
+        "tradeoff_label": "Data availability vs. model performance consistency across tasks",
+        "side_a": "Limited availability of large, well-annotated datasets constrains model training and improvement",
+        "side_b": "Model performance varies widely across datasets and tasks, especially on complex or ambiguous segmentation tasks",
+        "supporting_clusters": [
+          "MC1",
+          "MC2"
+        ],
+        "supporting_papers": [
+          "S1",
+          "S8"
+        ],
+        "hidden_assumption": "Improving model performance uniformly across diverse tasks requires sufficiently large and high-quality annotated datasets; without such data, models cannot generalize well, leading to variable performance.",
+        "why_it_matters": "This tradeoff highlights that efforts to improve medical image analysis models must balance the challenge of acquiring extensive, high-quality data with the goal of achieving consistent performance across varied and complex clinical tasks. Ignoring data limitations risks overestimating model generalizability and clinical utility.",
+        "confidence": "high"
+      }
+    ]
+  },
+  "reasoning": {
+    "clusters": [
+      {
+        "cluster_id": "MC1",
+        "cluster_label": "Data availability constraints in medical image analysis",
+        "limitation_pattern": "Lack of large-sized and well-annotated datasets limits model improvement",
+        "supporting_papers": [
+          "S1"
+        ],
+        "evidence_summary": "S1 highlights that the scarcity of large and well-annotated datasets remains a major bottleneck for advancing deep learning models in medical image analysis.",
+        "possible_field_gap": "There is an underexplored need for scalable methods to generate or curate large, high-quality annotated medical imaging datasets to enable robust model training.",
+        "confidence": "high"
+      },
+      {
+        "cluster_id": "MC2",
+        "cluster_label": "Variable model performance across datasets and tasks",
+        "limitation_pattern": "Performance varies widely depending on dataset and task; moderate to poor performance on complex or ambiguous segmentation tasks",
+        "supporting_papers": [
+          "S8"
+        ],
+        "evidence_summary": "S8 reports that model performance is inconsistent across different datasets and tasks, with notably poorer results on complex or ambiguous segmentation challenges.",
+        "possible_field_gap": "There is a lack of systematic approaches to improve model robustness and generalizability across diverse and complex medical imaging tasks.",
+        "confidence": "high"
+      }
+    ],
+    "tradeoffs": [
+      {
+        "tradeoff_id": "T1",
+        "tradeoff_label": "Data availability vs. model performance consistency across tasks",
+        "supporting_papers": [
+          "S1",
+          "S8"
+        ],
+        "latent_gap": "The field lacks integrated strategies that simultaneously address the scarcity of large, well-annotated datasets and the need for consistent model performance across heterogeneous and complex medical imaging tasks.",
+        "confidence": "high"
+      }
+    ],
+    "validated_research_gaps": [
+      {
+        "gap": "Development of scalable data augmentation, synthetic data generation, or semi-supervised annotation methods tailored for medical imaging to overcome dataset scarcity and improve model generalizability across diverse tasks.",
+        "why_it_matters": "Without sufficiently large and high-quality annotated datasets, models cannot generalize well, leading to variable and often poor performance on complex or ambiguous medical imaging tasks, limiting clinical applicability.",
+        "supporting_clusters": [
+          "MC1",
+          "MC2"
+        ],
+        "supporting_tradeoffs": [
+          "T1"
+        ],
+        "supporting_papers": [
+          "S1",
+          "S8"
+        ],
+        "confidence": "high",
+        "possible_research_idea": "Design and evaluate a semi-supervised learning framework that leverages limited annotated medical images combined with synthetic data generated via domain-specific generative models to improve segmentation performance consistency across multiple complex tasks.",
+        "required_data": "A small set of well-annotated medical images for target tasks, access to unlabeled medical image datasets, and domain knowledge to guide synthetic data generation.",
+        "feasibility": "medium",
+        "risks": "Synthetic data may not fully capture clinical variability, potentially leading to overfitting or biased models; semi-supervised methods require careful tuning to avoid performance degradation."
+      }
+    ]
+  }
+}
